@@ -1,0 +1,35 @@
+# Central configuration (FR8). Any key can be overridden by an env var
+# named FINSIGHT_<KEY_IN_UPPERCASE>, e.g. FINSIGHT_CHUNK_SIZE=400.
+
+paths:
+  raw_dir: data/raw
+  index_dir: data/index
+
+ingest:
+  chunk_size: 800
+  chunk_overlap: 150
+  # A line is treated as a running header/footer if it appears on at least
+  # this fraction of pages.
+  header_footer_min_ratio: 0.4
+  embed_batch_size: 64
+
+retrieval:
+  top_k: 8
+  collection: finsight
+
+models:
+  embedding_model: BAAI/bge-small-en-v1.5
+  llm_model: ollama/llama3.1:8b
+
+# Filename -> ticker lookup used for chunk metadata. Add companies here.
+tickers:
+  TCS: TCS
+  Infosys: INFY
+  HDFC Bank: HDFCBANK
+  ICICI Bank: ICICIBANK
+  Reliance Industries: RELIANCE
+  Asian Paints: ASIANPAINT
+  Maruti Suzuki: MARUTI
+  ITC: ITC
+  Sun Pharma: SUNPHARMA
+  Larsen and Toubro: LT

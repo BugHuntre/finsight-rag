@@ -1,0 +1,42 @@
+# FinSight RAG
+
+Ask plain-English questions about Indian company annual reports and earnings calls and get
+answers grounded in the documents, with citations (company, document, page).
+
+> Work in progress. Full requirements: `FinSight_RAG_Project_Requirements.pdf`.
+
+## Status
+
+- [x] Phase 1: setup (structure, config, CI stub)
+- [x] Phase 2: ingestion (PDF -> clean -> chunk -> embed -> ChromaDB, hash-based re-run safety)
+- [ ] Phase 3: query pipeline (retriever, prompt, LLM, citations)
+- [ ] Phase 4: FastAPI + Streamlit
+- [ ] Phase 5: evaluation (golden set, hit rate@k, MRR, RAGAS)
+- [ ] Phase 6: Docker, deployment, demo
+
+## Quick start
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e ".[dev]"
+copy .env.example .env
+```
+
+Put PDFs in `data/raw/`, named `<Company>_<FY####>_<annual_report|transcript>.pdf`
+(e.g. `Infosys_FY2025_annual_report.pdf`, `HDFC-Bank_FY2025_transcript.pdf`). Alternatively
+fill in `scripts/sources.csv` with links and run `python scripts/download_data.py`.
+
+```powershell
+python -m finsight.ingest --path data/raw
+```
+
+Settings (chunk size, overlap, top-k, models) live in `config.yaml`; override any of them with
+`FINSIGHT_<KEY>` environment variables or `.env`.
+
+## Tests
+
+```powershell
+ruff check .
+pytest --cov=finsight
+```
