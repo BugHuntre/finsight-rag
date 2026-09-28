@@ -12,6 +12,8 @@ ingest:
   # this fraction of pages.
   header_footer_min_ratio: 0.4
   embed_batch_size: 64
+  # Chunks shorter than this after cleaning are dropped (cover pages, captions, etc).
+  min_chunk_chars: 40
 
 retrieval:
   top_k: 8

@@ -24,6 +24,7 @@ class Config:
     chunk_overlap: int = 150
     header_footer_min_ratio: float = 0.4
     embed_batch_size: int = 64
+    min_chunk_chars: int = 40
     top_k: int = 8
     collection: str = "finsight"
     embedding_model: str = "BAAI/bge-small-en-v1.5"

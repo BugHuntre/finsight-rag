@@ -15,8 +15,8 @@ def collection(cfg):
 def test_load_pdf_pages_is_one_indexed(tmp_path, make_pdf):
     pdf = make_pdf(tmp_path / "TCS_FY2025_annual_report.pdf", PAGES)
     pages = load_pdf_pages(pdf)
-    assert [n for n, _ in pages] == [1, 2, 3]
-    assert "operating margin" in pages[0][1]
+    assert [p.page_no for p in pages] == [1, 2, 3]
+    assert "operating margin" in pages[0].text
 
 
 def test_ingest_stores_chunks_with_metadata(cfg, collection, tmp_path, make_pdf):
