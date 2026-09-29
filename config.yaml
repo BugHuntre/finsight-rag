@@ -18,10 +18,21 @@ ingest:
 retrieval:
   top_k: 8
   collection: finsight
+  # Cosine distance cutoff (bge-small): chunks farther than this from the question
+  # are dropped before the LLM ever sees them, so an out-of-scope question (e.g.
+  # "what's the capital of France?") triggers the not-found path deterministically
+  # instead of relying on the LLM to notice the context is irrelevant and refuse -
+  # a real failure observed with qwen2.5:3b during testing (it hallucinated an
+  # answer with fake citations rather than refusing). Calibrated from measured
+  # distances: real finance questions on this corpus scored 0.20-0.26, unrelated
+  # questions scored 0.38-0.53 - re-tune against the golden set in Phase 5 (G5).
+  max_distance: 0.32
 
 models:
   embedding_model: BAAI/bge-small-en-v1.5
-  llm_model: ollama/llama3.1:8b
+  # ollama/<model> for local dev, e.g. groq/llama-3.1-8b-instant for the deployed
+  # demo (Ollama can't run on the free hosting tier). qwen2.5:3b fits a 4GB GPU.
+  llm_model: ollama/qwen2.5:3b
 
 # Filename -> ticker lookup used for chunk metadata. Add companies here.
 tickers:

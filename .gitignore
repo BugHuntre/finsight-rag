@@ -14,3 +14,5 @@ data/index/*
 !data/index/.gitkeep
 
 .claude/
+
+logs/

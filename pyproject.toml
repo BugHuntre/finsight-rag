@@ -15,6 +15,7 @@ dependencies = [
     "chromadb",
     "pyyaml",
     "python-dotenv",
+    "litellm",
 ]
 
 [project.optional-dependencies]

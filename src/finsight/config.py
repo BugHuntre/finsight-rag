@@ -27,6 +27,7 @@ class Config:
     min_chunk_chars: int = 40
     top_k: int = 8
     collection: str = "finsight"
+    max_distance: float = 0.32
     embedding_model: str = "BAAI/bge-small-en-v1.5"
     llm_model: str = "ollama/llama3.1:8b"
     tickers: dict[str, str] = field(default_factory=dict)
