@@ -34,6 +34,11 @@ models:
   # demo (Ollama can't run on the free hosting tier). qwen2.5:3b fits a 4GB GPU.
   llm_model: ollama/qwen2.5:3b
 
+api:
+  # Off by default - the spec calls for the public demo to disable this endpoint,
+  # since anyone could otherwise trigger a full re-ingestion over the network.
+  enable_ingest_endpoint: false
+
 # Filename -> ticker lookup used for chunk metadata. Add companies here.
 tickers:
   TCS: TCS

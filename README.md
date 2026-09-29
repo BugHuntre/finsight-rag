@@ -11,7 +11,7 @@ answers grounded in the documents, with citations (company, document, page).
 - [x] Phase 2: ingestion (PDF -> clean -> chunk -> embed -> ChromaDB, hash-based re-run safety)
 - [x] Phase 3: query pipeline (retriever, grounded prompt, LLM via LiteLLM, citation mapping,
       not-found handling via a similarity cutoff)
-- [ ] Phase 4: FastAPI + Streamlit
+- [x] Phase 4: FastAPI backend (`/health`, `/query`, `/documents`, `/ingest`) + Streamlit UI
 - [ ] Phase 5: evaluation (golden set, hit rate@k, MRR, RAGAS)
 - [ ] Phase 6: Docker, deployment, demo
 
@@ -51,6 +51,17 @@ question with no sufficiently similar chunk in the index (cosine distance above
 `retrieval.max_distance` in `config.yaml`) gets a "not found" answer without calling
 the LLM at all, rather than relying on the LLM to notice and refuse on its own - a
 real failure observed in testing with qwen2.5:3b (see `docs/notes.md`).
+
+### Run the API and UI
+
+```powershell
+uvicorn finsight.api:app --reload          # Swagger docs at /docs
+streamlit run app/streamlit_app.py         # calls the API above (set FINSIGHT_API_URL if not on :8000)
+```
+
+`POST /ingest` is disabled by default (`api.enable_ingest_endpoint: false` in `config.yaml`) -
+the spec calls for it to be off in the public demo, since anyone could otherwise trigger a
+full re-ingestion over the network.
 
 ## Tests
 

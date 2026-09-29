@@ -16,10 +16,14 @@ dependencies = [
     "pyyaml",
     "python-dotenv",
     "litellm",
+    "fastapi",
+    "uvicorn[standard]",
+    "streamlit",
+    "requests",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-cov", "ruff"]
+dev = ["pytest", "pytest-cov", "ruff", "httpx"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -29,8 +29,11 @@ class Config:
     collection: str = "finsight"
     max_distance: float = 0.32
     embedding_model: str = "BAAI/bge-small-en-v1.5"
-    llm_model: str = "ollama/llama3.1:8b"
+    llm_model: str = "ollama/qwen2.5:3b"
     tickers: dict[str, str] = field(default_factory=dict)
+    # POST /ingest is disabled by default - the spec calls for it to be off in the
+    # public demo, since anyone could otherwise trigger ingestion on the deployed API.
+    enable_ingest_endpoint: bool = False
 
 
 def _resolve(path: str | Path) -> Path:
@@ -48,13 +51,19 @@ def load_config(path: str | Path | None = None, **overrides: Any) -> Config:
     raw = yaml.safe_load(Path(path or DEFAULT_CONFIG_PATH).read_text(encoding="utf-8")) or {}
 
     flat: dict[str, Any] = {}
-    for section in ("paths", "ingest", "retrieval", "models"):
+    for section in ("paths", "ingest", "retrieval", "models", "api"):
         flat.update(raw.get(section) or {})
     flat["tickers"] = raw.get("tickers") or {}
 
     for key, current in list(flat.items()):
         env_val = os.environ.get(f"FINSIGHT_{key.upper()}")
-        if env_val is not None and not isinstance(current, dict):
+        if env_val is None or isinstance(current, dict):
+            continue
+        if isinstance(current, bool):
+            # bool("false") is True in Python, so this needs its own case rather
+            # than falling through to the generic type(current)(env_val) below.
+            flat[key] = env_val.strip().lower() in ("1", "true", "yes", "on")
+        else:
             flat[key] = type(current)(env_val)
     flat.update({k: v for k, v in overrides.items() if v is not None})
 
