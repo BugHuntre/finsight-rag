@@ -30,11 +30,11 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "eval"]
 
 [tool.ruff]
 line-length = 100
-src = ["src", "tests"]
+src = ["src", "tests", "eval"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

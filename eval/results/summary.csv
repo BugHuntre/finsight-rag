@@ -1,0 +1,5 @@
+label,chunk_size,chunk_overlap,top_k,max_distance,collection,llm_model,retrieval_only,hit_rate_at_k,mrr,refusal_accuracy,faithfulness,faithfulness_n,answer_relevancy,answer_relevancy_n,latency_p50_ms,latency_p95_ms,n_questions,n_in_scope,n_out_of_scope
+E1_baseline,800,150,8,0.32,finsight,ollama/qwen2.5:3b,False,0.5777777777777777,0.46931216931216935,1.0,0.8066499582289056,45,0.6636268044180194,39,8648,14788,50,45,5
+E3_topk4,800,150,4,0.32,finsight,ollama/qwen2.5:3b,True,0.4888888888888889,0.45555555555555555,1.0,,0,,0,197,4683,50,45,5
+E2_chunk400,400,150,8,0.32,e2_chunk400,ollama/qwen2.5:3b,True,0.5555555555555556,0.4102116402116402,1.0,,0,,0,234,525,50,45,5
+E2_chunk1200,1200,150,8,0.32,e2_chunk1200,ollama/qwen2.5:3b,True,0.6222222222222222,0.41854497354497355,1.0,,0,,0,183,490,50,45,5

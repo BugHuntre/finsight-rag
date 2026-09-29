@@ -1,0 +1,373 @@
+{
+  "label": "E2_chunk1200",
+  "config": {
+    "chunk_size": 1200,
+    "chunk_overlap": 150,
+    "top_k": 8,
+    "max_distance": 0.32,
+    "collection": "e2_chunk1200",
+    "llm_model": "ollama/qwen2.5:3b",
+    "retrieval_only": true
+  },
+  "summary": {
+    "hit_rate_at_k": 0.6222222222222222,
+    "mrr": 0.41854497354497355,
+    "refusal_accuracy": 1.0,
+    "faithfulness": null,
+    "faithfulness_n": 0,
+    "answer_relevancy": null,
+    "answer_relevancy_n": 0,
+    "latency_p50_ms": 183,
+    "latency_p95_ms": 490,
+    "n_questions": 50,
+    "n_in_scope": 45,
+    "n_out_of_scope": 5
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 6349
+    },
+    {
+      "id": "q02",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 182
+    },
+    {
+      "id": "q03",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 169
+    },
+    {
+      "id": "q04",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 177
+    },
+    {
+      "id": "q05",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 165
+    },
+    {
+      "id": "q06",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.2,
+      "latency_ms": 181
+    },
+    {
+      "id": "q07",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 181
+    },
+    {
+      "id": "q08",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 185
+    },
+    {
+      "id": "q09",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 156
+    },
+    {
+      "id": "q10",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 186
+    },
+    {
+      "id": "q11",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 189
+    },
+    {
+      "id": "q12",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 163
+    },
+    {
+      "id": "q13",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 174
+    },
+    {
+      "id": "q14",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 167
+    },
+    {
+      "id": "q15",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 176
+    },
+    {
+      "id": "q16",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 166
+    },
+    {
+      "id": "q17",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 180
+    },
+    {
+      "id": "q18",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 169
+    },
+    {
+      "id": "q19",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 162
+    },
+    {
+      "id": "q20",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 196
+    },
+    {
+      "id": "q21",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 189
+    },
+    {
+      "id": "q22",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 186
+    },
+    {
+      "id": "q23",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 162
+    },
+    {
+      "id": "q24",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 175
+    },
+    {
+      "id": "q25",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 209
+    },
+    {
+      "id": "q26",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 164
+    },
+    {
+      "id": "q27",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 194
+    },
+    {
+      "id": "q28",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 177
+    },
+    {
+      "id": "q29",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 183
+    },
+    {
+      "id": "q30",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.2,
+      "latency_ms": 194
+    },
+    {
+      "id": "q31",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 194
+    },
+    {
+      "id": "q32",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 202
+    },
+    {
+      "id": "q33",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 188
+    },
+    {
+      "id": "q34",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 195
+    },
+    {
+      "id": "q35",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.125,
+      "latency_ms": 188
+    },
+    {
+      "id": "q36",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 175
+    },
+    {
+      "id": "q37",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 202
+    },
+    {
+      "id": "q38",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 177
+    },
+    {
+      "id": "q39",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.14285714285714285,
+      "latency_ms": 200
+    },
+    {
+      "id": "q40",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.25,
+      "latency_ms": 194
+    },
+    {
+      "id": "q41",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 184
+    },
+    {
+      "id": "q42",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 173
+    },
+    {
+      "id": "q43",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.25,
+      "latency_ms": 207
+    },
+    {
+      "id": "q44",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "latency_ms": 195
+    },
+    {
+      "id": "q45",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "latency_ms": 173
+    },
+    {
+      "id": "q46",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 199
+    },
+    {
+      "id": "q47",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 195
+    },
+    {
+      "id": "q48",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 10274
+    },
+    {
+      "id": "q49",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 490
+    },
+    {
+      "id": "q50",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 173
+    }
+  ]
+}

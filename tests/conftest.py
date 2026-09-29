@@ -13,12 +13,18 @@ _CONTEXT_BLOCK_RE = re.compile(r"(?m)^\[(\d+)\] ")
 
 
 class FakeEmbedder:
-    """Deterministic 8-dim embeddings; avoids downloading a real model."""
+    """Deterministic 8-dim embeddings; avoids downloading a real model.
+
+    L2-normalised like the real Embedder, so code that treats a plain dot
+    product as cosine similarity (see eval/llm_judge.py) behaves the same way
+    under this fake as it does for real.
+    """
 
     model_name = "fake"
 
     def embed_documents(self, texts):
-        return [[float((len(t) + i) % 7) + 1.0 for i in range(8)] for t in texts]
+        vectors = [[float((len(t) + i) % 7) + 1.0 for i in range(8)] for t in texts]
+        return [[x / sum(v * v for v in vec) ** 0.5 for x in vec] for vec in vectors]
 
     def embed_query(self, question):
         return self.embed_documents([question])[0]

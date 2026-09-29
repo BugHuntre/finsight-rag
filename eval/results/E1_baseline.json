@@ -1,0 +1,508 @@
+{
+  "label": "E1_baseline",
+  "config": {
+    "chunk_size": 800,
+    "chunk_overlap": 150,
+    "top_k": 8,
+    "max_distance": 0.32,
+    "collection": "finsight",
+    "llm_model": "ollama/qwen2.5:3b",
+    "retrieval_only": false
+  },
+  "summary": {
+    "hit_rate_at_k": 0.5777777777777777,
+    "mrr": 0.46931216931216935,
+    "refusal_accuracy": 1.0,
+    "faithfulness": 0.8066499582289056,
+    "faithfulness_n": 45,
+    "answer_relevancy": 0.6636268044180194,
+    "answer_relevancy_n": 39,
+    "latency_p50_ms": 8648,
+    "latency_p95_ms": 14788,
+    "n_questions": 50,
+    "n_in_scope": 45,
+    "n_out_of_scope": 5
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "TCS generated consolidated revenues of $30 billion in the fiscal year ended March 31, 2026. [1]",
+      "latency_ms": 36213,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.904615730462773
+    },
+    {
+      "id": "q02",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "TCS reported an operating margin of 25.0% for FY2026 [2][3].",
+      "latency_ms": 8114,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.8578023303115071
+    },
+    {
+      "id": "q03",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "TCS's voluntary IT services attrition rate for FY 2026 was 13. 7%. [1]",
+      "latency_ms": 2449,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8528899765353327
+    },
+    {
+      "id": "q04",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "TCS has a highly skilled workforce of over 580,000 consultants spread across 56 countries and 194 service delivery centers. [2]",
+      "latency_ms": 4270,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.6417019901819065
+    },
+    {
+      "id": "q05",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Infosys's consolidated revenues for fiscal 2026 were \u20b9 1,78,650 crore, showing a year-on-year growth of 9.6%. [1]",
+      "latency_ms": 9554,
+      "faithfulness": 0.7333333333333333,
+      "answer_relevancy": 0.9066161336584541
+    },
+    {
+      "id": "q06",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "Infosys announced a total dividend of `25.00 per share for fiscal 2026. [2]",
+      "latency_ms": 11033,
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.9300939935159658
+    },
+    {
+      "id": "q07",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Infosys's adjusted operating margin in fiscal 2026 was 21.0% [2].",
+      "latency_ms": 11198,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.95215435763686
+    },
+    {
+      "id": "q08",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 8415,
+      "faithfulness": 0.8421052631578947,
+      "answer_relevancy": 0.4218181417902335
+    },
+    {
+      "id": "q09",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 10828,
+      "faithfulness": 0.4583333333333333,
+      "answer_relevancy": 0.3743897005598516
+    },
+    {
+      "id": "q10",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "HDFC Bank's employee attrition rate in FY2025-26 was 23.1%. [2]",
+      "latency_ms": 10092,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8847787669644896
+    },
+    {
+      "id": "q11",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "HDFC Bank's Capital Adequacy Ratio for FY2025-26 was 19.7%. [1]",
+      "latency_ms": 10580,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8906346037609963
+    },
+    {
+      "id": "q12",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "HDFC Bank's Gross NPA ratio for FY2025-26 was 1.15%. [2]",
+      "latency_ms": 8990,
+      "faithfulness": 0.5,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q13",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Sun Pharma's gross sales grew by 11.9% to \u20b9 582 Billion in FY26. [1]",
+      "latency_ms": 8071,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7643595191293892
+    },
+    {
+      "id": "q14",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "answer": "Sun Pharma invested 6.17% in R&D during FY26, calculated as \u20b9 35.5 Billion / \u20b9 582 Billion * 100. [1][3]",
+      "latency_ms": 4377,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8159899376120611
+    },
+    {
+      "id": "q15",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.16666666666666666,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 7050,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.37004473750641825
+    },
+    {
+      "id": "q16",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "The Board of Directors at its meeting held on 22 May 2026, recommended a Final Dividend of \u20b9 5/- (Rupees Five only) per equity share of \u20b9 1/- (Rupee One only) each of the Company for the year ended 31 March 2026.",
+      "latency_ms": 7655,
+      "faithfulness": 1.0,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q17",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 9269,
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.3925117085208057
+    },
+    {
+      "id": "q18",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 9611,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4120733342682683
+    },
+    {
+      "id": "q19",
+      "type": "factual",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Asian Paints has installed in-house decorative paint manufacturing capacity of 2,290,000 KL/annum in India. [1]",
+      "latency_ms": 14788,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8862054614526759
+    },
+    {
+      "id": "q20",
+      "type": "factual",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 7919,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.34663068188002244
+    },
+    {
+      "id": "q21",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Improvement of business mix, productivity and realisation, rebalancing of pyramid along with favourable currency movements helped the expansion of margins [1][3].",
+      "latency_ms": 4331,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6318082030345967
+    },
+    {
+      "id": "q22",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Attrition risk might still increase for TCS despite its talent retention efforts due to the short supply of emerging technical skills (R) for the IT services industry, as highlighted in the context. [1] indicates that intensifying global competition for specialized AI talent may increase attrition levels, creating challenges in retaining critical expertise required for transformation initiatives.",
+      "latency_ms": 8216,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8000361873078998
+    },
+    {
+      "id": "q23",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Currency volatility affects TCS's reported results through fluctuations in reported revenue, profitability, and operating margins due to the INR's volatility against major global currencies. This is evident in the annual report where currency exchange rates movements positively impacted the reported revenue by 7.0% in FY2026, despite a decline in constant currency revenue growth of 2.4% [2]. To mitigate these risks, TCS has established robust processes, controls, and governance mechanisms focused on compliance with contractual obligations, information security standards, IP protection policies, and immigration regulations. The company has also strengthened its network of in-house legal counsel and supports it with reputed global law firms. Additionally, arbitration mechanisms have been incorporated into contractual arrangements as an alternative to court proceedings, including waivers of jury trials, particularly within the S market [4].",
+      "latency_ms": 11326,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7502936709819377
+    },
+    {
+      "id": "q24",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Global Capability Centers (GCCs) pose a risk to Infosys's business because customers looking inwards by insourcing or establishing GCCs for various services provided by Infosys may result in loss of addressable market share, thus impacting overall growth and profitability. [1]",
+      "latency_ms": 7272,
+      "faithfulness": 1.0,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q25",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "Infosys describes its balance sheet as carrying low liquidity risk because it is debt-free and maintains adequate cash to meet operational and strategic requirements, as well as unforeseen events, while also earning sufficient returns. This is supported by [1] stating Infosys has a high cash-generating business with access to capital markets and a strong credit rating. The Infosys Annual Report FY2026 (page 153) also mentions that the Company does not deal in commodities and hence the disclosure pursuant to SEBI Master Circular is not applicable. Additionally, [7] from HDFC Bank, which has a comprehensive mechanism to monitor cash-flow mismatches and liquidity risk, provides a contrast to Infosys' low liquidity risk description.",
+      "latency_ms": 11569,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8796176451002781
+    },
+    {
+      "id": "q26",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 6046,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4007909297419138
+    },
+    {
+      "id": "q27",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 7301,
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.4441505777296521
+    },
+    {
+      "id": "q28",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.16666666666666666,
+      "answer": "HDFC Bank considers high employee engagement as its best hedge against attrition because a stable workforce, resulting from high engagement and development of workforce, is capable of efficiently delivering tailored services to customers. [6]",
+      "latency_ms": 10499,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8180444778248033
+    },
+    {
+      "id": "q29",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "HDFC Bank's Enterprise Risk Management (ERM) framework is designed to support informed decision-making and to strengthen the Bank's ability to navigate an evolving risk landscape. It involves proactive integration of key risk factors into credit assessment, portfolio management, and stress testing, thereby ensuring that financial, operational, systemic, and emerging risks are effectively managed [1].",
+      "latency_ms": 8692,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8971116206409834
+    },
+    {
+      "id": "q30",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.14285714285714285,
+      "answer": "Sun Pharma announced the acquisition of Organon to align with its strategy of growing its Innovative Medicines business, specifically to enter the biosimilars market as a Top 10 global player. The acquisition also strengthens Sun Pharma's position in Established Brands/Branded Generics business and complements its existing strengths in women\u2019s health.",
+      "latency_ms": 7917,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8893345658287779
+    },
+    {
+      "id": "q31",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Inadequate data security poses a significant risk to Sun Pharma, as highlighted in the context [1]. The absence of a strong data integrity and security mechanism significantly increases the risk of data breaches, potentially leading to the loss of valuable data with potential adverse effects on the business.",
+      "latency_ms": 8108,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9333812535626747
+    },
+    {
+      "id": "q32",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 6617,
+      "faithfulness": 0.625,
+      "answer_relevancy": 0.3938139694125506
+    },
+    {
+      "id": "q33",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 4107,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4390686446142089
+    },
+    {
+      "id": "q34",
+      "type": "explanation",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 6077,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.43493019363838675
+    },
+    {
+      "id": "q35",
+      "type": "explanation",
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "answer": "Asian Paints has adopted several mitigation strategies to address climate-related risks, including:\n\n1. Establishing a robust Business Continuity and Emergency Preparedness framework, supported by regular training programs and mock drills.\n2. Implementing both short-term and long-term mitigation strategies to address climate change impacts on operations.\n3. Identifying and evaluating climate-related physical and transition risks in alignment with TCFD recommendations.\n4. Continuously tracking evolving climate regulations, conducting employee training, and ensuring timely compliance with new and amended requirements.\n5. Integrating climate considerations into long-term strategic planning and decision-making processes.\n6. Conducting Life Cycle Assessments (LCA) on a cradle-to-grave basis to evaluate raw materials, manufacturing, packaging, distribution, use, and end-of-life, and to identify key impact hotspots and guide targeted interventions.",
+      "latency_ms": 19941,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8683797082467813
+    },
+    {
+      "id": "q36",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "The profit attributable to shareholders of TCS increased from `26,713 crore in FY 2025 to `29,440 crore in FY 2026. For earnings per share (EPS), both basic and diluted EPS also increased: basic EPS from `6.47 in FY 2025 to `6.71 in FY 2026, and diluted EPS from `6.69 in FY 2025 to `6.88 in FY 2026.",
+      "latency_ms": 11013,
+      "faithfulness": 0.5,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q37",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "For standalone:\n- FY2026: \u20b9418 crore\n- FY2025: \u20b9415 crore\n\nFor consolidated:\n- FY2026: \u20b9421 crore\n- FY2025: \u20b9420 crore\n\nChange:\n- Standalone: \u20b93 crore (1.2%)\n- Consolidated: \u20b91 crore (0.5%)",
+      "latency_ms": 12864,
+      "faithfulness": 0.3333333333333333,
+      "answer_relevancy": 0.8278459764751843
+    },
+    {
+      "id": "q38",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "On a standalone basis, Infosys's net profit grew from \u20b933,097 cr in fiscal 2025 to \u20b943,075 cr in fiscal 2026 [2][3]. On a consolidated basis, the net profit also grew from \u20b933,097 cr in fiscal 2025 to \u20b943,075 cr in fiscal 2026 [3].",
+      "latency_ms": 11374,
+      "faithfulness": 0.5,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q39",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 9024,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.427113539374079
+    },
+    {
+      "id": "q40",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "HDFC Bank's Earnings Per Share (EPS) increased by 10.1% to Rs 48.62, and the dividend per share rose by 40.9% to Rs 15.50 in FY 2025-26. [1][2]",
+      "latency_ms": 11556,
+      "faithfulness": 1.0,
+      "answer_relevancy": null
+    },
+    {
+      "id": "q41",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "Profit After Tax for the year ended March 31, 2026, was ` 813 crore compared to ` 500 crore for the year ended March 31, 2025. [1][2]",
+      "latency_ms": 10289,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7886090256117156
+    },
+    {
+      "id": "q42",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 10372,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.42197538649406163
+    },
+    {
+      "id": "q43",
+      "type": "comparison",
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 8248,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.37381920953428177
+    },
+    {
+      "id": "q44",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 8648,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.46134763061269596
+    },
+    {
+      "id": "q45",
+      "type": "comparison",
+      "hit": true,
+      "reciprocal_rank": 0.14285714285714285,
+      "answer": "I could not find this information in the documents.",
+      "latency_ms": 8859,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.39466185078727917
+    },
+    {
+      "id": "q46",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 200
+    },
+    {
+      "id": "q47",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 158
+    },
+    {
+      "id": "q48",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 5347
+    },
+    {
+      "id": "q49",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 10835
+    },
+    {
+      "id": "q50",
+      "type": "out_of_scope",
+      "refused_correctly": true,
+      "latency_ms": 182
+    }
+  ]
+}
